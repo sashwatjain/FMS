@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+	<title>Login here</title>
+	<link rel="stylesheet" href="Login3.css">
+</head>
+	
+	
+	<body>
+		<script src="Validation.js">
+		</script>
+		<h1>FinanceClub</h1>
+		<hr>
+		<h2>Register Here</h2>
+		
+		<form action="Login3.html">
+	
+		
+		<table style="margin-right: auto; margin-left: auto">
+		
+		
+			<tr>
+				<td> 
+					<label>Enter email</label> <input  type=text     onkeyup="clearEmailErrMsg()" id="uemail"><span id="emailErr"></span><br>
+							 
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<label>Enter birthdate</label><input  type=date     onkeyup="clearDateErrMsg()" id="udob"><span id="dobErr"></span><br>
+				</td>	
+			</tr>
+			
+			<tr>
+				<td>
+						<label>Enter Username</label> <input  type=text     onkeyup="clearNmErrMsg()" id="name"><span id="nmErr"></span><br>
+				</td>
+			
+			</tr>
+			
+			<tr>
+				<td>
+					<label>Enter Password</label> <input  type="password"    onkeyup="clearpassErrMsg()" id="upass"><span id="passErr"></span><br>
+				</td>
+			</tr>
+			
+			<tr>
+				<td> Already Registered? Click <a href="Login3.html">Here</a></td>		
+			</tr>
+			
+			<tr>
+				<td>
+					<button onclick="return registrationDetails();" type="submit">Login</button>
+				</td>
+				
+			</tr>
+			<tr>
+				<td>
+					<button onclick="clearTheForm()" style="background-color: red">Clear</button>
+				</td>
+			</tr>
+				
+				
+				
+		</form>
+		
+			
+		</form>
+			
+		
+		</table>
+		
+	</body>
+
+</html>
