@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Finance Management System</title>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- JavaScript for form field validation -->
+  <script>
+    function validateRegistrationForm() {
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+
+    // Validate name (non-empty)
+    if (name.trim() === "") {
+      alert("Please enter your name.");
+      return false;
+    }
+
+    // Validate phone (non-empty and numeric)
+    if (phone.trim() === "" || isNaN(phone)) {
+      alert("Please enter a valid phone number.");
+      return false;
+    }
+
+    // Validate email (non-empty and a valid email format)
+    if (email.trim() === "" || !validateEmail(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+
+    // Validate username (non-empty)
+    if (username.trim() === "") {
+      alert("Please enter a username.");
+      return false;
+    }
+
+    // Validate password (non-empty)
+    if (password.trim() === "") {
+      alert("Please enter a password.");
+      return false;
+    }
+
+    // Validate password and confirm password (must match)
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return false;
+    }
+
+    return true;
+  }
+
+  function validateEmail(email) {
+    // Regular expression for basic email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  }
+
+    
+
+    function validateLoginForm() {
+     const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Validate username (non-empty)
+    if (username.trim() === "") {
+      alert("Please enter your username.");
+      return false;
+    }
+
+    // Validate password (non-empty)
+    if (password.trim() === "") {
+      alert("Please enter your password.");
+      return false;
+    }
+
+    return true;
+    }
+
+    function validatePurchaseForm() {
+    const productName = document.getElementById("productName").value;
+    const productCost = document.getElementById("productCost").value;
+    const emiScheme = document.getElementById("emiScheme").value;
+
+    // Validate product name (non-empty)
+    if (productName.trim() === "") {
+      alert("Please enter the product name.");
+      return false;
+    }
+
+    // Validate product cost (non-empty and numeric)
+    if (productCost.trim() === "" || isNaN(productCost)) {
+      alert("Please enter a valid product cost.");
+      return false;
+    }}
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Welcome to Finance Management System</h1>
+    <ul>
+      <li><a href="registration.html">Register</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="purchase.html">Product Purchase</a></li>
+    </ul>
+  </div>
+</body>
+
+</html>
